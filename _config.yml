@@ -1,0 +1,27 @@
+# Setup
+title: Shine Sun
+author: ""
+email: shinewsun@gmail.com
+#description: >- # this means to ignore newlines until "baseurl:"
+#    Homepage of aspiring software engineer Shine Sun
+description: ""
+
+twitter_username: UseRubyLang
+github_username:  WWRS
+linkedin_username: shinewsun
+
+# Build settings
+theme: minima
+# plugins:
+#   - jekyll-feed
+
+collections_dir: sections
+collections:
+  'Leetcode':
+    output: true
+
+# Excludes
+exclude:
+  - Gemfile
+  - Gemfile.lock
+# - vendor
