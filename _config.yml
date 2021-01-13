@@ -19,6 +19,8 @@ collections_dir: sections
 collections:
   'Leetcode':
     output: true
+  'nand2tetris':
+    output: true
 
 # Excludes
 exclude:
