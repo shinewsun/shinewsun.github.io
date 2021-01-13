@@ -134,7 +134,7 @@ The pseudocode for `return` is on Slide 135. Here's the case that tells you why 
 
 - You will need to move `SP` to `ARG + 1` at some point, but `return` doesn't know how many args there are. So if you move `ARG` before you move `SP`, you won't be able to find where `SP` should go.
 - You will end up overwriting `return address` with `return value`, but you need the `return address` after this overwrite so you need to copy `return address` into some other location.
-- It's natural to try to copy `return address` over `saved LCL` but you would have to move `LCL` first. If you move `LCL` then the best pointer you have for the frame `SP`. But you will have to move `SP` to `ARG + 1` and you will lose the frame when that happens (you don't know how many args there are). So you would have to save `saved ARG` somewhere first.
+- It's natural to try to copy `return address` over `saved LCL` but you would have to move `LCL` first. If you move `LCL` then the best pointer you have for the frame is `SP`. But you will have to move `SP` to `ARG + 1` and you will lose the frame when that happens (you don't know how many args there are). So you would have to save `saved ARG` somewhere first.
 
 So instead it's easier to just save `return address` and write `return value` over it. Then you can move `SP` and then use `LCL` as a "fake `SP`". The last thing `LCL` will do is move itself, so losing the frame at that point is okay since by that time, we've gotten everything we need out of the frame.
 
