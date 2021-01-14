@@ -188,6 +188,19 @@ The way arrays get accessed is kinda weird. In order to read from an array, you 
 
 ## Project 12
 
+I used this batch script to automate compilation. If you save it as `projects\12\run.bat` and call it from `projects\12\` as `run.bat Math` it will save `Math.jack` into the right place and compile the folder.
+```batch
+@ECHO OFF
+COPY %1.jack %1Test
+..\..\tools\JackCompiler %1Test
+```
+This (untested) bash script should do the same thing.
+```bash
+cp "$1.jack" "$1Test"
+../../tools/JackCompiler.sh "$1Test"
+```
+
+
 ### Math
 Note that `a * 2` is the same as `a + a` which is why `Math.multiply()` only uses addition.
 
