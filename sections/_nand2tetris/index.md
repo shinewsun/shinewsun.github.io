@@ -138,7 +138,7 @@ The pseudocode for `return` is on Slide 135. Here's the case that tells you why 
 
 So instead it's easier to just save `return address` and write `return value` over it. Then you can move `SP` and then use `LCL` as a "fake `SP`". The last thing `LCL` will do is move itself, so losing the frame at that point is okay since by that time, we've gotten everything we need out of the frame.
 
-To actually save `return address`, use a temp variable. ~~I moved `THIS` and `THAT` and then wrote `return address` over `saved THIS` and write `return value` over `saved THAT`. I would not recommend it.~~
+To actually save `return address`, use a temp variable. ~~I moved `THIS` and `THAT` and then wrote `return address` over `saved THIS` and wrote `return value` over `saved THAT`. I would not recommend it.~~
 
 ## Project 9
 ~~I skipped this project.~~
@@ -206,10 +206,10 @@ Note that `a * 2` is the same as `a + a` which is why `Math.multiply()` only use
 
 Slide 16 claims that `Math.divide()` only uses addition, which is only kind of true since `2 * q * y` cannot be done with only addition, unless you count `q * y` as addition.
 
-If you implement a `twoToThe[i]` array, recall that `~32767` is `10000000 0000000`.
+If you implement a `twoToThe[i]` array, recall that `-32768` and `~32767` are `10000000 0000000` in binary.
 
 ### Memory
-You could take a full course on heap management. Don't worry about fragmentation for this implementation.
+You could take a full semester-long course on heap management. Don't worry about fragmentation for this implementation.
 
 ### Screen
 For pixel drawing, Slide 55 has a typo. You should `let address = 16384 + (32 * y) + (x / 16);` and `let value = Memory.peek(address);`.
