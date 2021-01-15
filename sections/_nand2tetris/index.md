@@ -5,7 +5,9 @@ title: Notes on nand2tetris
 
 The course can be found at <https://www.nand2tetris.org/>.
 
-Upon completion, I had some notes I wanted to put down.
+Upon completion, I had some notes I wanted to put down as clarifications for others.
+
+I also have a section where I comment on my actual solutions, especially where I intentionally took different approaches. That's <a href="solutions">here</a>.
 
 ## The website
 In order to get to the Projects, you have to click the word `Projects` on the sidebar. Hovering over that button shows `Project 00` on the side which indicates that other projects should appear below it. But in fact, you should be clicking the word on the sidebar, not the `Project 00`.
@@ -17,18 +19,8 @@ HDL seems at first like a strangely formatted imperative language but it is not.
 
 Start each design with a truth table. Ask if there are any ways to AND or OR things together to make gates. Don't underestimate the value of plugging the same wire into both inputs of a gate (e.g. you can fork a wire with `OR(a=a, b=false, out=a2)` or `AND(a=a, b=true, out=a2)`), or plugging `true` or `false` into inputs.
 
-For MUX and DMUX, use AND gates.
-
-For the 16-bit versions of gates, I just copypasted the 1-bit versions 16 times. I'm not sure if there's a better way to do those.
-
-For MUX8WAY and DMUX8WAY, only three components are required, including the corresponding 4WAY gates
-
 ## Project 2
 ~~I built these in Minecraft as a kid.~~
-
-The HalfAdder only takes one XOR and one AND. The FullAdder uses two HalfAdders (go figure).
-
-Inc16 comes after Add16 for a reason. Use `true`.
 
 The ALU builds exactly as on Slide 53. The flags take effect in order, e.g. `zx nx` gives `!0` regardless of input. Don't forget the output flags on Slide 57.
 
@@ -42,7 +34,7 @@ If PC receives multiple signals at the same time, it should behave as the code i
 ## Project 4
 Mult assumes that the inputs are nonnegative and the result won't overflow, so you don't have to check for those.
 
-On Fill, I'm checking for a keypress on every cycle. Remember that `-1` is `11111111 11111111`, all black.
+Remember that `-1` is `11111111 11111111`, all black.
 
 ## Project 5
 In Memory, your main components should be a RAM16K, a Screen, and a Keyboard. Don't use RAM8K for the screen and don't use Register for the keyboard! Also note that bit 15 (`address[14]`) will DMUX between main RAM and IO memory. In IO memory, bit 14 (`address[13]`) will DMUX between screen and keyboard. Also remember to send the load signal to the correct component.
@@ -138,11 +130,9 @@ The pseudocode for `return` is on Slide 135. Here's the case that tells you why 
 
 So instead it's easier to just save `return address` and write `return value` over it. Then you can move `SP` and then use `LCL` as a "fake `SP`". The last thing `LCL` will do is move itself, so losing the frame at that point is okay since by that time, we've gotten everything we need out of the frame.
 
-To actually save `return address`, use a temp variable. ~~I moved `THIS` and `THAT` and then wrote `return address` over `saved THIS` and wrote `return value` over `saved THAT`. I would not recommend it.~~
+To actually save `return address`, use a temp variable.
 
 ## Project 9
-~~I skipped this project.~~
-
 Things to keep in mind about the Jack language:
 - Variables
   - Declaring variables is done with `kind type name;` where `kind` is `static` for static variables, `field` for instance variables, and `var` for local variables.
