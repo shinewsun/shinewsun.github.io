@@ -19,6 +19,8 @@ collections_dir: sections
 collections:
   'Leetcode':
     output: true
+  'Presentations':
+    output: true
   'Projects':
     output: true
   'nand2tetris':
