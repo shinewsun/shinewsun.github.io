@@ -7,7 +7,7 @@ layout: home
 
 I graduated from the University of Washington in December 2020 with a B.S. in Mathematics. My favorite subject was topology.
 
-I'm always passionate about learning new things and teaching others. I also love making things with my own hands and solving problems with other people. I'm not satisfied with a product until it exceeds the client's expectations.
+I'm always passionate about learning new things and teaching others. I also love making things with my own hands and solving problems with other people. I'm not satisfied with a product until it exceeds expectations.
 
 I'm looking to work as a software engineer in the Seattle area. A few languages I'm proficient in:
 - Ruby
@@ -16,7 +16,6 @@ I'm looking to work as a software engineer in the Seattle area. A few languages 
 - Python
 
 # What I'm working on:
-{% assign sections = site.collections | where_exp: 'section', 'section.label != "posts"' %}
-{% for section in sections %}
+{% for section in site.data.sections %}
 ## <a href="{{ section.label }}">{{ section.label }}</a>
 {% endfor %}

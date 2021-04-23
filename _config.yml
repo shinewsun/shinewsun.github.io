@@ -25,6 +25,8 @@ collections:
     output: true
   'nand2tetris':
     output: true
+  'Miscellaneous':
+    output: true
 
 # Excludes
 exclude:
