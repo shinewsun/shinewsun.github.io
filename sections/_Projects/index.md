@@ -23,7 +23,7 @@ Source code can be found at <https://github.com/WWRS/circlepondbot>.
 ### [UW Game Development Club Visualizer](https://github.com/uw-gamedev-visualizer/uw-gamedev-visualizer)
 Polls live audio playing through the speakers and displays various visualizations.
 
-If you've been to a club meeting since 2019, this was on the screen before the start of the talk!
+If you've been to a club meeting in-person since 2019, this was probably on the screen before the start of the talk!
 
 Add your own visualizer and submit a pull request or contact me on Discord, `@RShields#5160`.
 
@@ -43,28 +43,58 @@ Source code can be found at <https://github.com/WWRS/Fix-the-MyPlan-Crashes/blob
 
 ---
 
+<img src="/assets/towers_hanoi.png" width="200px" align="left" style="margin: 10px 20px 0 0"/>
+### [Towers of Hanoi](https://rshieldsprojects.github.io/projects/towers_hanoi/)
 
-<img src="/assets/triangles.png" width="200px" align="left" style="margin: 20px 20px 0 0"/>
-### [Triangles](https://rshieldsprojects.github.io/projects/triangles.html)
+November 2021
 
-The [mice problem](https://mathworld.wolfram.com/MiceProblem.html) asks, if a mouse starts at each vertex of a regular *n*-gon, then each travels toward the next mouse over, what paths will they trace?
+The [Towers of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) problem is a classic in computer science. I created a visualization of a few algorithms to solve it:
 
-This project answers that for triangles. Move the slider to change the granularity of the simulation.
+- Classic recursion
+- Breadth-first search
+- Depth-first search
+- Q-learning
 
 <br clear="left">
 
-<img src="/assets/orbit.png" width="200px" align="left" style="margin: 10px 20px 0 0"/>
-### [Orbit](https://rshieldsprojects.github.io/projects/orbit.html)
+<img src="/assets/sudoku.png" width="200px" align="left" style="margin: 10px 20px 0 0"/>
+### [Probabilistic Sudoku Solver](https://rshieldsprojects.github.io/projects/sudoku.html)
 
-A simulation of a planet's orbit. Move the slider to change the eccentricity of the orbit.
+July 2021
+
+There are many strategies for computer-solving sudoku puzzles. This project takes a novel approach: For each square, update the probability of it being a given number by looking at the probability of that number not appearing in any other square of its row, column, or subgrid. Perform this update repeatedly until every probability converges to 0 or 1.
+
+This approach doesn't always converge to a solution, but it converges very quickly for most puzzles, regardless of how difficult the puzzle is for humans or other approaches.
 
 <br clear="left">
 
 <img src="/assets/quadtree.png" width="200px" align="left" style="margin: 10px 20px 0 0"/>
 ### [Quadtree](https://rshieldsprojects.github.io/projects/quadtree.html)
 
+December 2020
+
 [Quadtrees](https://en.wikipedia.org/wiki/Quadtree) are used to optimize 2-dimensional collision detection and to compress images.
 
 This is a simple implementation of a quadtree, counting how many particles are in each branch. The "fuller" the branch, the redder its border.
+
+<br clear="left">
+
+<img src="/assets/orbit.png" width="200px" align="left" style="margin: 10px 20px 0 0"/>
+### [Orbit](https://rshieldsprojects.github.io/projects/orbit.html)
+
+December 2020
+
+A simulation of a planet's orbit. Move the slider to change the eccentricity of the orbit.
+
+<br clear="left">
+
+<img src="/assets/triangles.png" width="200px" align="left" style="margin: 20px 20px 0 0"/>
+### [Triangles](https://rshieldsprojects.github.io/projects/triangles.html)
+
+July 2020
+
+The [mice problem](https://mathworld.wolfram.com/MiceProblem.html) asks, if a mouse starts at each vertex of a regular *n*-gon, then each travels toward the next mouse over, what paths will they trace?
+
+This project answers that for triangles. Move the slider to change the granularity of the simulation.
 
 <br clear="left">
